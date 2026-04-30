@@ -15,7 +15,7 @@ export const Bio = {
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/rishigoswami18",
   resume:
-    "https://drive.google.com/file/d/1EMMz177TdafQIFvfmE9NQju2TjWM4fWp/view?usp=sharing",
+    "https://drive.google.com/file/d/1dVPl09YbJRQ5ZcU5lLl75vrY7w21Li2E/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/hrishikesh-giri/",
   twitter: "https://x.com/RishiGo13597016",
   insta: "https://www.instagram.com/rishigoswami18/?hl=en",
