@@ -14,10 +14,13 @@ const Card = styled.div`
   flex-direction: column;
   gap: 14px;
   transition: all 0.5s ease-in-out;
+  border: 1px solid transparent;
+  
   &:hover {
     transform: translateY(-10px);
     box-shadow: 0 0 50px 4px rgba(0, 0, 0, 0.6);
     filter: brightness(1.1);
+    border: 1px solid ${({ theme }) => theme.primary + "80"};
   }
 `;
 const Image = styled.img`
@@ -26,6 +29,7 @@ const Image = styled.img`
   background-color: ${({ theme }) => theme.white};
   border-radius: 10px;
   box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
 `;
 const Tags = styled.div`
   width: 100%;
@@ -34,6 +38,14 @@ const Tags = styled.div`
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 4px;
+`;
+const Tag = styled.span`
+  font-size: 10px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.primary};
+  background-color: ${({ theme }) => theme.primary + "15"};
+  padding: 2px 8px;
+  border-radius: 10px;
 `;
 const Details = styled.div`
   width: 100%;
@@ -93,21 +105,35 @@ const Button = styled.a`
   text-decoration: none;
   font-weight: 600;
   text-align: center;
+  margin-top: auto;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid ${({ theme }) => theme.primary};
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: ${({ theme }) => theme.primary};
+    color: white;
+  }
 `;
 
 const ProjectCard = ({ project }) => {
   return (
     <Card>
       <Image src={project.image} />
-      <Tags></Tags>
+      <Tags>
+        {project.tags?.map((tag, index) => (
+          <Tag key={index}>{tag}</Tag>
+        ))}
+      </Tags>
       <Details>
         <Title>{project.title}</Title>
         <Date>{project.date}</Date>
         <Description>{project.description}</Description>
       </Details>
       <Members>
-        {project.member?.map((member) => (
-          <Avatar src={member.img} />
+        {project.member?.map((member, index) => (
+          <Avatar key={index} src={member.img} />
         ))}
       </Members>
       <Button href={project.github} target="_blank">

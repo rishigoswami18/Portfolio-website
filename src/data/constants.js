@@ -1,3 +1,7 @@
+import agriadvisor from "../images/agriadvisor.png";
+import cricwave from "../images/cricwave.png";
+import mytube from "../images/mytube.png";
+import ai_data_analyst from "../images/ai_data_analyst.png";
 
 export const Bio = {
   name: "Hrishikesh Giri",
@@ -409,27 +413,65 @@ export const education = [
     degree: "CBSE(X), Science with Computer",
   },
 ];
-
 export const projects = [
   {
     id: 11,
-    title: "freeChat",
+    title: "freeChat (Real-time Messaging)",
     date: "July 2025 - October 2025",
     description:
-      "FreeChat is a modern, real-time social chat application built using the MERN stack, designed to provide fast, secure, and engaging communication between users. The app supports instant messaging, user authentication, friend connections, and social-style interactions in a clean and responsive interface..",
+      "FreeChat is a modern, real-time social chat application built using the MERN stack, designed to provide fast, secure, and engaging communication between users. The app supports instant messaging, user authentication, friend connections, and social-style interactions in a clean and responsive interface.",
     image:
-      "C:\Users\Lenovo\Portfolio3D\portfolio\src\images\image.png",
+      "https://github.com/rishigoswami18/freeChat-web/raw/main/screenshot.png",
     tags: [
       "React Js",
-      "PostgressSQL",
+      "MongoDB",
       "Node Js",
       "Express Js",
+      "Socket.io",
       "Redux",
-      "React Flow",
     ],
     category: "web app",
     github: "https://github.com/rishigoswami18/freeChat-web",
     webapp: "https://freechat-web-1.onrender.com/login",
+  },
+  {
+    id: 13,
+    title: "freeChat Pro (Video & Voice)",
+    date: "Dec 2025 - Jan 2026",
+    description:
+      "A high-performance real-time communication platform featuring instant messaging, video conferencing, and voice calls. Integrated with Stream SDK for low-latency media streams and Zustand for efficient state management.",
+    image:
+      "https://github.com/rishigoswami18/freeChat/raw/main/screenshot.png",
+    tags: [
+      "React (Vite)",
+      "Stream SDK",
+      "Node.js",
+      "MongoDB",
+      "Zustand",
+      "JWT",
+    ],
+    category: "web app",
+    github: "https://github.com/rishigoswami18/freeChat",
+    webapp: "",
+  },
+  {
+    id: 12,
+    title: "3D Book Reader (Web)",
+    date: "Nov 2025",
+    description:
+      "An immersive 3D book reading platform built with React and Three.js. Features a realistic book-turning animation, PDF support using PDF.js, and a glassmorphic user interface for a premium reading experience.",
+    image:
+      "https://github.com/rishigoswami18/book-app-web/raw/main/screenshot.png",
+    tags: [
+      "React",
+      "Three.js",
+      "React Three Fiber",
+      "Firebase",
+      "PDF.js",
+    ],
+    category: "web app",
+    github: "https://github.com/rishigoswami18/book-app-web",
+    webapp: "",
   },
   {
     id: 9,
@@ -441,19 +483,18 @@ export const projects = [
       "",
     tags: [
       "Kotlin",
-"Android Studio",
-"XML",
-"Material Design",
-"Firebase Authentication",
-"Firebase Realtime Database",
-"Firebase Storage",
-"Firebase Cloud Messaging",
-"Barteksc PDFView",
-"PSPDFKit",
-"Razorpay",
-"Git",
-"GitHub",
-
+      "Android Studio",
+      "XML",
+      "Material Design",
+      "Firebase Authentication",
+      "Firebase Realtime Database",
+      "Firebase Storage",
+      "Firebase Cloud Messaging",
+      "Barteksc PDFView",
+      "PSPDFKit",
+      "Razorpay",
+      "Git",
+      "GitHub",
     ],
     category: "android app",
     github: "https://github.com/rishigoswami18/bookapp",
@@ -461,14 +502,14 @@ export const projects = [
   },
   {
     id: 0,
-    title: "Cinematic Success AI: Predictive Analytics",
-    date: "feb 2026 ",
+    title: "Cinematic Success AI",
+    date: "Feb 2026",
     description:
-      " This end-to-end platform utilizes XGBoost to predict the financial success of films and Generative AI to render cinematic concepts. It serves as a decision-support tool for studio financing and production planning.",
+      "An end-to-end platform utilizing XGBoost to predict the financial success of films and Generative AI to render cinematic concepts based on script analysis. Serves as a decision-support tool for studio financing.",
     image:
       "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
-    tags: ["jupyter", "Streamlit", "Numpy", "Pandas", "Matplotlib", "Seaborn", "XGBoost", "Generative AI"],
-    category: "web app",
+    tags: ["XGBoost", "Generative AI", "Streamlit", "Numpy", "Pandas", "Matplotlib", "Seaborn"],
+    category: "machine learning",
     github: "https://github.com/rishigoswami18/MoviePrediction",
     webapp: "https://moviepredictionbyrishi.streamlit.app/",
     member: [
@@ -478,146 +519,106 @@ export const projects = [
         linkedin: "https://www.linkedin.com/in/hrishikesh-giri/",
         github: "https://github.com/rishigoswami18/",
       },
-      
     ],
   },
-  // {
-  //   id: 1,
-  //   title: "Vexa",
-  //   date: "Oct 2022 - Jan 2023",
-  //   description:
-  //     "Designed and developed the Vexa project, a project management app that helps users and teams stay organized and on track. Implemented key features such as task tracking, team collaboration, and time tracking to improve productivity and project outcomes and also invite team/project members. The plan is to add a community of users where they can find developers and other team members and chat system implementation.",
-  //   image:
-  //     "https://user-images.githubusercontent.com/64485885/234916413-96296f13-fe4b-4cc4-b215-e72bd7c27928.png",
-  //   tags: [
-  //     "React Js",
-  //     "MongoDb",
-  //     "Node Js",
-  //     "Express Js",
-  //     "Redux",
-  //     "NodeMailer",
-  //   ],
-  //   category: "web app",
-  //   github: "https://github.com/rishavchanda/Project-Management-App",
-  //   webapp: "https://vexa-app.netlify.app/",
-  // },
-  // {
-  //   id: 2,
-  //   title: "Brain Tumor Detection",
-  //   date: "Jan 2023 - Mar 2023",
-  //   description:
-  //     "Preprocessed and augmented the dataset to improve model accuracy, trained the model, created API using model and Python, and used React web app for the project's front end. Achievements: Achieved an accuracy of 99.2% to accurately detect brain tumors from medical images.",
-  //   image:
-  //     "https://github.com/rishavchanda/Brain-Tumor-Detection/raw/main/Readme_resource/Image2.png",
-  //   tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
-  //   category: "machine learning",
-  //   github: "https://github.com/rishavchanda/Brain-Tumor-Detection",
-  //   webapp: "https://brain-tumor.netlify.app/",
-  //   member: [
-  //     {
-  //       name: "Rishav Chanda",
-  //       img: "https://avatars.githubusercontent.com/u/64485885?v=4",
-  //       linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
-  //       github: "https://github.com/rishavchanda/",
-  //     },
-  //     {
-  //       name: "Upasana Chaudhuri",
-  //       img: "https://avatars.githubusercontent.com/u/100614635?v=4",
-  //       linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
-  //       github: "https://github.com/upasana0710",
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: 3,
-  //   title: "Buckoid",
-  //   date: "Dec 2021 - Apr 2022",
-  //   description:
-  //     "App Is Currently In Playstore 100+ Downloads. This Project proposes an “Expense Tracking App”. Keep track of your personal expenses and compare them to your monthly income with the budget planner. It has Google Drive Cloud API for Backup of User Room Database. Made with Kotlin in MVVM Architecture & Live Data.",
-  //   image:
-  //     "https://camo.githubusercontent.com/3ad28aa710d18525f1fc87de056ed53c706d09979589bfd5a773df36653bad38/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f6c6f67696e2d65613565322e61707073706f742e636f6d2f6f2f4255434b4f49442532302831292e706e673f616c743d6d6564696126746f6b656e3d32653735376235372d323964372d346263612d613562322d653164346538313432373435",
-  //   tags: ["Kotlin", "MVVM", "Room Database", "Google Drive Cloud API"],
-  //   category: "android app",
-  //   github: "https://github.com/rishavchanda/Buckoid-Android-App",
-  //   webapp: "https://play.google.com/store/apps/details?id=com.rishav.buckoid",
-  // },
-  // {
-  //   id: 10,
-  //   title: "Job Finding App",
-  //   date: "Jun 2023 - Jul 2023",
-  //   description:
-  //     "A Job Finding App made with React Native, Axios. Users can search for any job coming from API and apply there.",
-  //   image:
-  //     "https://user-images.githubusercontent.com/64485885/255237090-cf798a2c-1b41-4bb7-b904-b5353a1f08e8.png",
-  //   tags: ["React Native", "JavaScript", "Axios"],
-  //   category: "android app",
-  //   github: "https://github.com/rishavchanda/Job-finder-App",
-  //   webapp: "https://github.com/rishavchanda/Job-finder-App",
-  // },
-  // {
-  //   id: 4,
-  //   title: "Whatsapp Clone",
-  //   date: "Jul 2021",
-  //   description:
-  //     "A WhatsApp clone made with React JS, Firebase, and Material UI. It has Phone Authentication, Real-time Database. It has a chat room where users can chat with each other. It has a sidebar where users can see all the chat rooms and can create a new chat room. It has a login page where users can log in with their Google account.",
-  //   image:
-  //     "https://firebasestorage.googleapis.com/v0/b/whatsapp-clone-rishav.appspot.com/o/Screenshot%20(151).png?alt=media&token=48391593-1ef0-4a8c-a92a-eb82bdf38e89",
-  //   tags: ["React Js", "Firebase", "Firestore", "Node JS"],
-  //   category: "web app",
-  //   github: "https://github.com/rishavchanda/Whatsapp-Clone-React-Js",
-  //   webapp: "https://whatsapp-clone-rishav.web.app",
-  // },
-  // {
-  //   id: 5,
-  //   title: "Todo Web App",
-  //   date: "Jun 2021",
-  //   description:
-  //     " A Todo Web App made with React JS, Redux, and Material UI. It has a login page where users can log in with their Google account. It has a sidebar where users can see all the tasks and can create a new task. It has a calendar where users can see all the tasks on a particular date. It has a search bar where users can search for a particular task.",
-  //   image:
-  //     "https://camo.githubusercontent.com/84ac6ab6f378348ef28d8184062b7e9e3511a1252ae3966eaa49e8e998f732a7/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f746f646f2d6170702d63386331392e61707073706f742e636f6d2f6f2f53637265656e73686f74253230283938292e706e673f616c743d6d6564696126746f6b656e3d33643335646366322d626666322d343730382d393031632d343232383866383332386633",
-  //   tags: ["React Js", "Local Storage", "AWS Auth", "Node JS"],
-  //   category: "web app",
-  //   github: "https://github.com/rishavchanda/Todo-Web-App",
-  //   webapp: "https://rishav-react-todo.netlify.app/",
-  // },
-  // {
-  //   id: 6,
-  //   title: "Breaking Bad",
-  //   date: "Jun 2021",
-  //   description:
-  //     "A simple react app that shows the characters of the famous TV series Breaking Bad. It uses the Breaking Bad API to fetch the data. It also has a search bar to search for a particular character.",
-  //   image:
-  //     "https://camo.githubusercontent.com/937774368308a82419f53dd6eeb4a8675780e119636488b4e3cfe5d34859a72a/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f746f646f2d6170702d63386331392e61707073706f742e636f6d2f6f2f53637265656e73686f7425323028313534292e706e673f616c743d6d6564696126746f6b656e3d65613439383630632d303435362d343333342d616435372d336239346663303333363263",
-  //   tags: ["React Js", "API", "Axios", "Node JS"],
-  //   category: "web app",
-  //   github: "https://github.com/rishavchanda/Breaking-Bad",
-  //   webapp: "https://breaking-bad-webapp.netlify.app",
-  // },
-  // {
-  //   id: 7,
-  //   title: "Quiz App",
-  //   date: "Dec 2020 - Jan 2021",
-  //   description:
-  //     "A android quiz app made with Java and Firebase. It has a login page where users can log in with their Google account. It has a sidebar where users can see all the quiz categories and can create a new quiz. It has a leaderboard where users can see the top 10 scorers. It has a search bar where users can search for a particular quiz.",
-  //   image:
-  //     "https://github-production-user-asset-6210df.s3.amazonaws.com/64485885/239726262-c1b061d1-d9d0-42ef-9f1c-0412d14bc4f6.gif",
-  //   tags: ["Java", "Android Studio", "Firebase", "Google Auth"],
-  //   category: "android app",
-  //   github: "https://github.com/rishavchanda/Quiz-Earn",
-  //   webapp: "https://github.com/rishavchanda/Quiz-Earn",
-  // },
-  // {
-  //   id: 8,
-  //   title: "Face Recognition",
-  //   date: "Jan 2021",
-  //   description:
-  //     "A Face recognition python app made with OpenCV. It uses face_recognition library to detect faces. It uses the webcam to detect faces. It also has a search bar to search for a particular face.",
-  //   image:
-  //     "https://dontrepeatyourself.org/media/face-recognition-with-python-dlib-and-deep-learning_cezKZBj.png",
-  //   tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
-  //   category: "machine learning",
-  //   github: "https://github.com/rishavchanda/Face-Recodnition-AI-with-Python",
-  //   webapp: "https://github.com/rishavchanda/Face-Recodnition-AI-with-Python",
-  // },
+  {
+    id: 1,
+    title: "AgriAdvisor",
+    date: "Apr 2026",
+    description: "An AI-powered agricultural advisory system. The backend service provides tailored recommendations for farmers to optimize crop yields and manage agricultural resources effectively.",
+    image: agriadvisor,
+    tags: ["Python", "Jupyter Notebook", "Machine Learning"],
+    category: "machine learning",
+    github: "https://github.com/rishigoswami18/AgriAdvisor",
+    webapp: "",
+  },
+  {
+    id: 2,
+    title: "Cricwave",
+    date: "Mar 2026",
+    description: "A comprehensive web application for cricket enthusiasts, providing real-time updates, match statistics, and interactive features.",
+    image: cricwave,
+    tags: ["TypeScript", "React", "Next.js"],
+    category: "web app",
+    github: "https://github.com/rishigoswami18/Cricwave",
+    webapp: "https://cricwave-eta.vercel.app",
+  },
+  {
+    id: 3,
+    title: "AI Data Analyst (Capstone)",
+    date: "Apr 2026",
+    description: "Professional-grade AI chatbot featuring an AutoML pipeline (XGBoost/Isolation Forest), interactive Plotly visualizations, anomaly detection, and automated PDF report generation. Integrated with Groq Llama-3 for high-speed analysis.",
+    image: ai_data_analyst,
+    tags: ["AutoML", "Flask", "Python", "Plotly", "Groq API", "Llama-3"],
+    category: "machine learning",
+    github: "https://github.com/rishigoswami18/Data-Analyst-ai",
+    webapp: "",
+  },
+  {
+    id: 4,
+    title: "Emotion Detector",
+    date: "Feb 2026",
+    description: "A machine learning project designed to detect human emotions from visual or audio inputs using advanced neural networks.",
+    image: "",
+    tags: ["Jupyter Notebook", "Deep Learning", "Computer Vision"],
+    category: "machine learning",
+    github: "https://github.com/rishigoswami18/EmotioDetector",
+    webapp: "",
+  },
+  {
+    id: 5,
+    title: "Insurance Cost Prediction",
+    date: "Feb 2026",
+    description: "A predictive analytics model that estimates health insurance costs based on individual demographic and health data.",
+    image: "",
+    tags: ["Jupyter Notebook", "Machine Learning", "Data Science", "Python"],
+    category: "machine learning",
+    github: "https://github.com/rishigoswami18/insurance-cost-prediction",
+    webapp: "",
+  },
+  {
+    id: 6,
+    title: "LPU Mini Demo",
+    date: "Jul 2025",
+    description: "A front-end web application demo built for showcasing interactive web design components and features.",
+    image: "",
+    tags: ["JavaScript", "React", "Frontend"],
+    category: "web app",
+    github: "https://github.com/rishigoswami18/LPU-Mini-Demo",
+    webapp: "https://lpu-mini-demo-rouge.vercel.app",
+  },
+  {
+    id: 7,
+    title: "MyTube (Video Platform)",
+    date: "Jan 2026",
+    description: "Full-stack high-performance video platform built with Next.js 15. Features optimized media handling via ImageKit, secure authentication with NextAuth, and robust data persistence with MongoDB.",
+    image: mytube,
+    tags: ["Next.js 15", "TypeScript", "MongoDB", "ImageKit", "NextAuth"],
+    category: "web app",
+    github: "https://github.com/rishigoswami18/MyTube",
+    webapp: "https://my-tube-rouge.vercel.app",
+  },
+  {
+    id: 8,
+    title: "Retail BI & Segmentation",
+    date: "Apr 2026",
+    description: "End-to-end Retail Intelligence platform. Features Python-based cleaning, SQL-driven analytics, and RFM customer segmentation visualized through interactive dashboards.",
+    image: "",
+    tags: ["Python", "SQL", "RFM Segmentation", "Power BI", "Data Analysis"],
+    category: "machine learning",
+    github: "https://github.com/rishigoswami18/Retail-Business-Intelligence",
+    webapp: "",
+  },
+  {
+    id: 10,
+    title: "ScanToPdf App",
+    date: "Feb 2026 - Apr 2026",
+    description: "An Android application to scan physical documents to PDF. Includes hardware sensor integration (accelerometer, gyroscope) for automated capturing, voice assistant and AI chatbot functionality via Groq API (Llama-3), and Firebase for backend services.",
+    image: "",
+    tags: ["Kotlin", "Android Studio", "Firebase", "Groq API", "Hardware Sensors"],
+    category: "android app",
+    github: "https://github.com/rishigoswami18/ScanToPdfApp",
+    webapp: "",
+  }
 ];
 
