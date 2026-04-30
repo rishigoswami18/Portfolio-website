@@ -18,8 +18,8 @@ const Stars = (props) => {
   );
 
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 10;
-    ref.current.rotation.y -= delta / 15;
+    ref.current.rotation.x -= delta / 20;
+    ref.current.rotation.y -= delta / 30;
   });
 
   return (

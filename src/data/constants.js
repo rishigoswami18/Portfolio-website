@@ -6,13 +6,14 @@ import ai_data_analyst from "../images/ai_data_analyst.png";
 export const Bio = {
   name: "Hrishikesh Giri",
   roles: [
+    "Machine Learning Engineer",
+    "Data Scientist",
     "Full Stack Developer",
     "Android Developer",
-    "UI/UX Designer",
-    "Programmer",
   ],
   description:
-    "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
+    "I am a passionate Machine Learning Engineer and Data Scientist with a strong foundation in building intelligent systems and data-driven solutions. With expertise in Full Stack and Android development, I bridge the gap between complex algorithms and user-centric applications. I am dedicated to solving real-world problems through innovative technology and continuous learning.",
+
   github: "https://github.com/rishigoswami18",
   resume:
     "https://drive.google.com/file/d/1dVPl09YbJRQ5ZcU5lLl75vrY7w21Li2E/view?usp=sharing",

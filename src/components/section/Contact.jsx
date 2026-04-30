@@ -9,6 +9,7 @@ const Container = styled.div`
   position: relative;
   z-index: 1;
   align-items: center;
+  padding: 40px 0;
 `;
 
 const Wrapper = styled.div`
@@ -25,23 +26,24 @@ const Wrapper = styled.div`
   }
 `;
 
-const Title = styled.div`
+const Title = styled.h1`
   font-size: 52px;
   text-align: center;
-  font-weight: 600;
+  font-weight: 800;
   margin-top: 20px;
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
     margin-top: 12px;
-    font-size: 32px;
+    font-size: 36px;
   }
 `;
 
-const Desc = styled.div`
+const Desc = styled.p`
   font-size: 18px;
   text-align: center;
-  font-weight: 600;
+  font-weight: 500;
   color: ${({ theme }) => theme.text_secondary};
+  max-width: 700px;
   @media (max-width: 768px) {
     font-size: 16px;
   }
@@ -52,31 +54,34 @@ const ContactForm = styled.form`
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  background-color: rgba(17, 25, 40, 0.83);
-  border: 1px solid rgba(255, 255, 255, 0.125);
+  background-color: rgba(17, 25, 40, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 32px;
-  border-radius: 12px;
-  box-shadow: rgba(23, 92, 230, 0.1) 0px 4px 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   margin-top: 28px;
-  gap: 12px;
+  gap: 16px;
+  backdrop-filter: blur(10px);
 `;
 
-const ContactTitle = styled.div`
+const ContactTitle = styled.h2`
   font-size: 28px;
   margin-bottom: 6px;
-  font-weight: 600;
+  font-weight: 700;
   color: ${({ theme }) => theme.text_primary};
 `;
 
 const ContactInput = styled.input`
   flex: 1;
   background-color: transparent;
-  border: 1px solid ${({ theme }) => theme.text_secondary + 50};
+  border: 1px solid ${({ theme }) => theme.text_secondary + '33'};
   outline: none;
   font-size: 18px;
   color: ${({ theme }) => theme.text_primary};
   border-radius: 12px;
-  padding: 12px 16px;
+  padding: 14px 16px;
+  transition: all 0.3s ease;
+  
   &:focus {
     border: 1px solid ${({ theme }) => theme.primary};
   }
@@ -85,29 +90,43 @@ const ContactInput = styled.input`
 const ContactInputMessage = styled.textarea`
   flex: 1;
   background-color: transparent;
-  border: 1px solid ${({ theme }) => theme.text_secondary + 50};
+  border: 1px solid ${({ theme }) => theme.text_secondary + '33'};
   outline: none;
   font-size: 18px;
   color: ${({ theme }) => theme.text_primary};
   border-radius: 12px;
-  padding: 12px 16px;
+  padding: 14px 16px;
+  transition: all 0.3s ease;
+  
   &:focus {
     border: 1px solid ${({ theme }) => theme.primary};
   }
 `;
 
-const ContactButton = styled.input`
+const ContactButton = styled.button`
   width: 100%;
   text-align: center;
-  background: hsla(271, 100%, 50%, 1);
-  padding: 13px 16px;
-  margin-top: 2px;
+  background: ${({ theme }) => theme.primary};
+  background: linear-gradient(
+    225deg,
+    ${({ theme }) => theme.primary} 0%,
+    ${({ theme }) => theme.secondary} 100%
+  );
+  padding: 14px 16px;
+  margin-top: 8px;
   border-radius: 12px;
   border: none;
-  color: ${({ theme }) => theme.text_primary};
+  color: ${({ theme }) => theme.white};
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(133, 76, 230, 0.3);
+    filter: brightness(1.1);
+  }
 `;
 
 const Contact = () => {
@@ -117,10 +136,10 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_dsynqzn",           // ✅ Your EmailJS Service ID
-        "template_8t5qov6",          // ✅ Your EmailJS Template ID
+        "service_dsynqzn",
+        "template_8t5qov6",
         form.current,
-        "MI3lvtmMhzou3mpA2"          // ✅ Your EmailJS Public Key
+        "MI3lvtmMhzou3mpA2"
       )
       .then(
         (result) => {
@@ -134,10 +153,10 @@ const Contact = () => {
   };
 
   return (
-    <Container id="Education">
+    <Container id="contact">
       <Wrapper>
         <Title>Contact</Title>
-        <Desc style={{ marginBottom: "40px" }}>
+        <Desc>
           Feel free to reach out to me for any questions or opportunities!
         </Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
@@ -164,7 +183,7 @@ const Contact = () => {
             rows={4}
             required
           />
-          <ContactButton type="submit" value="Send" />
+          <ContactButton type="submit">Send Message</ContactButton>
         </ContactForm>
       </Wrapper>
     </Container>

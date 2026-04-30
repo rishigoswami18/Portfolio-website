@@ -8,11 +8,11 @@ import ExperienceCard from "../cards/ExperienceCard";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-contnet: center;
-  margin-top: 50px;
-  position: rlative;
+  justify-content: center;
+  position: relative;
   z-index: 1;
   align-items: center;
+  padding: 40px 0;
 `;
 
 const Wrapper = styled.div`
@@ -28,22 +28,25 @@ const Wrapper = styled.div`
     flex-direction: column;
   }
 `;
-const Title = styled.div`
+
+const Title = styled.h1`
   font-size: 52px;
   text-align: center;
-  font-weight: 600;
+  font-weight: 800;
   margin-top: 20px;
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
     margin-top: 12px;
-    font-size: 32px;
+    font-size: 36px;
   }
 `;
-const Desc = styled.div`
+
+const Desc = styled.p`
   font-size: 18px;
   text-align: center;
-  font-weight: 600;
+  font-weight: 500;
   color: ${({ theme }) => theme.text_secondary};
+  max-width: 700px;
   @media (max-width: 768px) {
     font-size: 16px;
   }
@@ -51,14 +54,10 @@ const Desc = styled.div`
 
 const Experience = () => {
   return (
-    <Container id="Experience">
+    <Container id="experience">
       <Wrapper>
         <Title>Experience</Title>
-        <Desc
-          style={{
-            marginBottom: "40px",
-          }}
-        >
+        <Desc>
           My work experience as a software engineer and working on different
           companies and projects.
         </Desc>
@@ -75,5 +74,6 @@ const Experience = () => {
     </Container>
   );
 };
+
 
 export default Experience;
