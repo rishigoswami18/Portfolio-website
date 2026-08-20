@@ -16,7 +16,7 @@ export const Bio = {
 
   github: "https://github.com/rishigoswami18",
   resume:
-    "https://drive.google.com/file/d/1dVPl09YbJRQ5ZcU5lLl75vrY7w21Li2E/view?usp=sharing",
+    "https://drive.google.com/file/d/1nU3iK58G4ZnMqJB4zlXriJ27638uelpJ/view?usp=drive_link",
   linkedin: "https://www.linkedin.com/in/hrishikesh-giri/",
   twitter: "https://x.com/RishiGo13597016",
   insta: "https://www.instagram.com/rishigoswami18/?hl=en",
