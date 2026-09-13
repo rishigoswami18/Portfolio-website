@@ -5,6 +5,7 @@ import Typewriter from "typewriter-effect";
 import HeroImg from "../../images/portfolio3.png";
 import HeroBgAnimation from "../HeroBgAnimation";
 import Tilt from 'react-parallax-tilt';
+import { motion } from "framer-motion";
 import {
   headContainerAnimation,
   headContentAnimation,
