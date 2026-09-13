@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { projects } from "../../data/constants";
+import { usePortfolio } from "../../data/PortfolioContext";
 import ProjectCard from "../cards/ProjectCard";
 
 const Container = styled.div`
@@ -109,14 +109,12 @@ const CardContainer = styled.div`
 
 const Projects = () => {
   const [toggle, setToggle] = useState("all");
+  const { portfolio: { projects, sections } } = usePortfolio();
   return (
     <Container id="projects">
       <Wrapper>
-        <Title>Projects</Title>
-        <Desc>
-          I have worked on a wide range of projects. From web apps to android
-          apps. Here are some of my projects.
-        </Desc>
+        <Title>{sections.projects.title}</Title>
+        <Desc>{sections.projects.description}</Desc>
 
         <ToggleButtonGroup>
           <ToggleButton

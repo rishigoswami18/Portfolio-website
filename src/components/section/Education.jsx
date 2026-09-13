@@ -2,7 +2,7 @@ import React from "react";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import styled from "styled-components";
-import { education } from "../../data/constants";
+import { usePortfolio } from "../../data/PortfolioContext";
 import EducationCard from "../cards/EducationCard";
 import EarthCanvas from "../canvas/Earth";
 
@@ -54,14 +54,12 @@ const Desc = styled.p`
 `;
 
 const Education = () => {
+  const { portfolio: { education, sections } } = usePortfolio();
   return (
     <Container id="education">
       <Wrapper>
-        <Title>Education</Title>
-        <Desc>
-          My education has been a journey of self-discovery and growth. My
-          educational details are as follows.
-        </Desc>
+        <Title>{sections.education.title}</Title>
+        <Desc>{sections.education.description}</Desc>
 
         <VerticalTimeline>
           {education.map((education, index) => (

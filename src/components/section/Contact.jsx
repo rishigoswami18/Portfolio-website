@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
+import { usePortfolio } from "../../data/PortfolioContext";
 
 const Container = styled.div`
   display: flex;
@@ -131,6 +132,7 @@ const ContactButton = styled.button`
 
 const Contact = () => {
   const form = useRef();
+  const { portfolio: { sections } } = usePortfolio();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -142,7 +144,7 @@ const Contact = () => {
         "MI3lvtmMhzou3mpA2"
       )
       .then(
-        (result) => {
+        () => {
           alert("Message Sent!");
           form.current.reset();
         },
@@ -155,10 +157,8 @@ const Contact = () => {
   return (
     <Container id="contact">
       <Wrapper>
-        <Title>Contact</Title>
-        <Desc>
-          Feel free to reach out to me for any questions or opportunities!
-        </Desc>
+        <Title>{sections.contact.title}</Title>
+        <Desc>{sections.contact.description}</Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
           <ContactInput

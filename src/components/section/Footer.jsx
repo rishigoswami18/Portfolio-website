@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Bio } from "../../data/constants";
+import { usePortfolio } from "../../data/PortfolioContext";
 import {
   FacebookRounded,
   Instagram,
@@ -94,6 +94,7 @@ const Copyright = styled.p`
 `;
 
 const Footer = () => {
+  const { portfolio: { bio: Bio } } = usePortfolio();
   return (
     <FooterContainer>
       <FooterWrapper>

@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styled, { ThemeProvider } from "styled-components";
-import {darkTheme} from "./utils/Themes";
+import { PortfolioProvider, usePortfolio } from "./data/PortfolioContext";
 import { BrowserRouter } from 'react-router-dom';
+import AdminPanel from './components/AdminPanel';
 import Navbar from './components/Navbar';
 import Hero from "./components/section/Hero";
 import Skills  from './components/section/Skills';
@@ -39,9 +40,20 @@ const Wrapper = styled.div`
   clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 99%, 0 100%);
 `;
 
-function App() {
+function PortfolioApp() {
+  const { portfolio } = usePortfolio();
+  const [isAdmin, setIsAdmin] = useState(() => window.location.hash === "#admin");
+
+  useEffect(() => {
+    const handleHashChange = () => setIsAdmin(window.location.hash === "#admin");
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
+  if (isAdmin) return <AdminPanel />;
+
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={portfolio.theme}>
       <BrowserRouter>
         <Navbar />
         <Body>
@@ -63,5 +75,12 @@ function App() {
   );
 }
 
+function App() {
+  return (
+    <PortfolioProvider>
+      <PortfolioApp />
+    </PortfolioProvider>
+  );
+}
 
 export default App

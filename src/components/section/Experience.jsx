@@ -2,7 +2,7 @@ import React from "react";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import styled from "styled-components";
-import { experiences } from "../../data/constants";
+import { usePortfolio } from "../../data/PortfolioContext";
 import ExperienceCard from "../cards/ExperienceCard";
 
 const Container = styled.div`
@@ -53,14 +53,12 @@ const Desc = styled.p`
 `;
 
 const Experience = () => {
+  const { portfolio: { experiences, sections } } = usePortfolio();
   return (
     <Container id="experience">
       <Wrapper>
-        <Title>Experience</Title>
-        <Desc>
-          My work experience as a software engineer and working on different
-          companies and projects.
-        </Desc>
+        <Title>{sections.experience.title}</Title>
+        <Desc>{sections.experience.description}</Desc>
 
         <VerticalTimeline>
           {experiences.map((experience, index) => (

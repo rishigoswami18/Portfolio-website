@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { skills } from "../../data/constants";
+import { usePortfolio } from "../../data/PortfolioContext";
 import Tilt from 'react-parallax-tilt';
 
 const Container = styled.div`
@@ -168,15 +168,13 @@ const SkillItem = styled.div`
 `;
 
 const Skills = () => {
+  const { portfolio: { skills, sections } } = usePortfolio();
   return (
     <Container id="skills">
       <GlowBg />
       <Wrapper>
-        <Title>Skills</Title>
-        <Desc>
-          Here are some of my skills on which I have been working on for the
-          past 3 years.
-        </Desc>
+        <Title>{sections.skills.title}</Title>
+        <Desc>{sections.skills.description}</Desc>
 
         <SkillsContainer>
           {skills.map((skill, index) => (

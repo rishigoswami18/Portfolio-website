@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from "styled-components";
 import {Link as LinkR} from "react-router-dom";
-import {Bio} from "../data/constants";
+import { usePortfolio } from "../data/PortfolioContext";
 import {MenuRounded} from "@mui/icons-material";
 import { useTheme } from "styled-components";
 
@@ -134,6 +134,7 @@ const MobileMenu = styled.ul`
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { portfolio: { bio: Bio } } = usePortfolio();
   const theme = useTheme();
   return (
     <Nav>
@@ -191,4 +192,4 @@ const Navbar = () => {
 
 
 
-export default Navbar;
+export default Navbar;
